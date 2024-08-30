@@ -1,0 +1,48 @@
+#include<stdio.h>
+#include<string.h>
+int compare1(char s1[],int n)
+{
+	int count=0;
+	int i=0;
+	while(s1[i]!='\0')
+	{
+		count+=1;
+		i++;	
+	}
+	return count;
+}
+
+int compare2(char s2[],int n)
+{
+	int count=0;
+	int i=0;
+	while(s2[i]!='\0')
+	{
+		count+=1;
+		i++;	
+	}
+	return count;
+}
+
+
+int main()
+{
+	int n;
+	printf("Enter the size of array: ");
+	scanf("%d",&n);
+
+	char str1[n]; 
+	char str2[n];
+	printf("**Enter two string to compare**\n");
+	printf("enter the string1: ");
+	scanf("%s",&str1);
+	
+	printf("enter the string2:");
+	scanf("%s",&str2);
+	if(compare1(str1,n)==compare2(str2,n))
+		printf("The Length of given string is equal");
+	else
+	   printf("The length of given string is not equal");
+	
+	return 0;
+}
